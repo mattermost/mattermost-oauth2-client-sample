@@ -6,7 +6,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-    if (!req.user) {
+  if (!req.isAuthenticated()) {
       return res.render('index', { title: 'Mattermost Sample App' });
     }
   

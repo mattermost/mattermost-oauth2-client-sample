@@ -1,8 +1,11 @@
 import auth from '../libs/auth';
+import config from '../libs/config';
 import express from 'express';
 import passport from 'passport';
 
 const router = express.Router();
+
+auth.setUrl(config.get("mattermost_url")); //only for testing purposes
 
 /* GET home page. */
 router.get('/', (req, res, next) => {

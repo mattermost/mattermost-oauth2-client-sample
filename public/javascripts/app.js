@@ -18,7 +18,7 @@ function receiveMessage(event) {
             if (request.status >= 200 && request.status < 400) {
                 // Success!
                 document.querySelector('#parent').innerText = mm_url;
-                document.querySelector('.oauth').style.display = 'block';
+                document.querySelector('#embedded').style.display = 'block';
             }
         };
 
@@ -39,10 +39,17 @@ function ready() {
         localStorage.removeItem('error');
         localStorage.setItem('user', true);
     }
-    
-    setTimeout(function() {
-        window.close();
-    }, 1000);
+
+    if (window.location.href.indexOf('callback') >= 0) {
+        setTimeout(function () {
+            console.log('is this running');
+            window.close();
+        }, 1000);
+    }
+
+    if (!localStorage.getItem('ispopup')) {
+        handleOAuth();
+    }
 }
 
 function handleOAuth() {
@@ -63,6 +70,7 @@ function handleOAuth() {
 function makeAuth(e) {
     e.preventDefault();
     document.querySelector('.oauth-error').innerText = '';
+    localStorage.setItem('ispopup', true);
 
     var w = 600;
     var h = 420;
@@ -85,6 +93,7 @@ function makeAuth(e) {
     this._oauthInterval = window.setInterval(function() {
         if(self.opener.closed) {
             window.clearInterval(self._oauthInterval);
+            localStorage.removeItem('ispopup');
             handleOAuth();
         }
     }, 1000);

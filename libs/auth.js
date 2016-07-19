@@ -21,6 +21,8 @@ var auth = {
             clientSecret: config.get("client_secret"),
             callbackURL: "/oauth/callback"
         }, (accessToken, refreshToken, profile, cb) => {
+            profile.accessToken = accessToken;
+            profile.refreshToken = refreshToken;
             return cb(null, profile);
         });
 

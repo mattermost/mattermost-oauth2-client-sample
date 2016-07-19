@@ -1,13 +1,13 @@
 <div style="position: relative; margin: 0 10px; text-align: center" id="entry">
     <h1>{{title}}</h1>
-    <p>Welcome to {{title}} embedded in <span id='parent'></span></p>
-    <br>
-    <br>
+    <p>Welcome to {{title}} <label id='embedded' style='display:none;'>embedded in <span id='parent'></span></label></p>
     <br>
     <div>
         <h2>Test OAuth</h2>
         <div class="oauth-error"></div>
-        <a class="oauth" href="#" onclick="makeAuth(event)" style="display: none;">Sign-in with your Mattermost account.</a>
+        <div class='login-option'>
+            <a href="/login">Sign-in with your Mattermost account.</a><br/>
+            <a class="oauth" href="#" onclick="makeAuth(event)">Sign-in with your Mattermost account (open popup).</a><br/>
+        </div>
     </div>
-
 </div>

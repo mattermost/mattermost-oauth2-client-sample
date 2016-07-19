@@ -1,13 +1,13 @@
 <div style="position: relative; margin: 0 10px; text-align: center">
     <h1>{{title}}</h1>
-    <p>Welcome to {{title}} embedded in <span id='parent'></span></p>
-    <br>
-    <br>
+    <p>Welcome to {{title}} <label id='embedded' style='display:none;'>embedded in <span id='parent'></span></label></p>
     <br>
     <div>
         <h2>User details</h2>
         {{#with user}}
-            <div>Id: {{id}}</div>
+            <div>Token: {{accessToken}}</div>
+            <div>Refresh Token: {{refreshToken}}</div>
+            <div>User Id: {{id}}</div>
             <div>Username: {{username}}</div>
             <div>Email: {{email}}</div>
             <div>Firstname: {{first_name}}</div>

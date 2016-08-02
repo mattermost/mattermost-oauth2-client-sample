@@ -1,4 +1,4 @@
-# Mattermost OAuth2 Sample Application 
+# Mattermost OAuth2 Client Sample Application 
 
 ## Overview
 

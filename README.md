@@ -1,8 +1,10 @@
-# Mattermost OAuth2 Sample App
+# Mattermost OAuth2 Client Sample Application 
 
 ## Overview
 
-This app build on NodeJS is just a sample on how to implement OAuth2 Authentication with Mattermost as a Oauth2 Service Provider.
+Mattermost 3.3 and later includes an **OAuth2 Service Provider**, enabling users with an account on a Mattermost server to sign-in to 3rd party applications. 
+
+This sample application, created in NodeJS, demonstrates how an OAuth2 client can be used with the Mattermost OAuth2 Service Provider.
 
 ## Setup Server Environment
 

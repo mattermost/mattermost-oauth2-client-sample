@@ -1,5 +1,6 @@
 {
   "mattermost_url": "http://localhost:8065",
-  "client_id": "",
-  "client_secret": ""
+  "client_url": "http://localhost:3000",
+  "client_id": "1zegfhzhh3dwifh7aochbidcuw",
+  "client_secret": "go9disn8xiy7byjb9rh1aobwwc"
 }

@@ -12,7 +12,7 @@ This sample application, created in NodeJS, demonstrates how an OAuth2 client ca
 2. Create an account and a team
 3. Go To **System Console -> Integrations -> OAuth2 Provider** and enable the service
 4. Go back to the team you created and from the **Main Menu** select **Integrations**
-5. Add a new OAuth2 App
+5. Add a new OAuth2 App, with `http://localhost:3000/oauth/callback` as the callback URL
 
 ## Setup Sample App Dev Environment
 1. Clone the Github repository to run the sample

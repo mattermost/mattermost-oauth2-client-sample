@@ -15,8 +15,8 @@ var auth = {
         this.url = mattermostUrl;
 
         const oauth2Strategy = new OAuth2Strategy({
-            authorizationURL: `${mattermostUrl}/api/v3/oauth/authorize`,
-            tokenURL: `${mattermostUrl}/api/v3/oauth/access_token`,
+            authorizationURL: `${mattermostUrl}/oauth/authorize`,
+            tokenURL: `${mattermostUrl}/oauth/access_token`,
             clientID: config.get("client_id"),
             clientSecret: config.get("client_secret"),
             callbackURL: "/oauth/callback"

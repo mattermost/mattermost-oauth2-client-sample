@@ -17,8 +17,8 @@ This sample application, created in NodeJS, demonstrates how an OAuth2 client ca
 ## Setup Sample App Dev Environment
 1. Clone the Github repository to run the sample
 ```
-  git clone https://github.com/enahum/mattermost-sample-app.git
-  cd mattermost-sample-app
+  git clone https://github.com/mattermost/mattermost-oauth2-client-sample
+  cd mattermost-oauth2-client-sample
 ```
 2. Install the dependencies
  ```
